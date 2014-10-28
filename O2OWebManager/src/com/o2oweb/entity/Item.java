@@ -32,6 +32,13 @@ public class Item implements java.io.Serializable {
 
 	/** default constructor */
 	public Item() {
+		this.discount = 0;
+		this.itemName = "";
+		this.levelId = 0;
+		this.price = 0;
+		this.inPrice = 0;
+		this.stockNum = 0;
+		this.barCode = "";
 	}
 
 	/** minimal constructor */

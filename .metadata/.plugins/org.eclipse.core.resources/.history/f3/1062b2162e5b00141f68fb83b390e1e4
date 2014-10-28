@@ -26,7 +26,7 @@
 
 		<default-interceptor-ref name="verify"></default-interceptor-ref>
 		<global-results>
-			<result name="user">/login.jsp</result>
+			<result name="user">/index.html</result>
 		</global-results>
 	</package>
 
@@ -42,10 +42,11 @@
 		name="userAction" class="userAction"> <result>/pages/Index.jsp</result> <result 
 		name="toSelect">/pages/Index2.jsp</result> <result name="toShop" type="redirectAction">page3/page3Action.action</result> 
 		</action> </package> -->
-	<package name="user" extends="struts-default" namespace="/user">
+	<package name="user" extends="struts-o2o" namespace="/user">
 		<action name="loginAction" class="loginAction">
-			<result name="success">/index.jsp</result>
-			<result name="failure">/login.jsp</result>
+			<result type="json">
+				<param name="root">obj</param>
+			</result>
 		</action>
 	</package>
 	<package name="image" extends="struts-o2o" namespace="/image">

@@ -8,7 +8,6 @@ import com.o2oweb.entity.User;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
-import com.sun.mail.iap.Response;
 
 public class LoginInterceptor extends AbstractInterceptor {
 
@@ -20,11 +19,9 @@ public class LoginInterceptor extends AbstractInterceptor {
 
 		// 取得请求的Action名
 		String name = invocation.getInvocationContext().getName();
-		System.out.println("Action name:" + name);
 		if (name.equals("loginInterceptorAction")) {
 			return invocation.invoke();
 		}
-		System.out.println("login interceptor start...");
 		ActionContext ac = invocation.getInvocationContext();
 		Map session = (Map) ac.get(ServletActionContext.SESSION);
 

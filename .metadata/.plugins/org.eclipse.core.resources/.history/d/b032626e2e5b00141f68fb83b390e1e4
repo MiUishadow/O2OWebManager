@@ -26,7 +26,7 @@
 
 		<default-interceptor-ref name="verify"></default-interceptor-ref>
 		<global-results>
-			<result name="user">/login.jsp</result>
+			<result name="user">/index.html</result>
 		</global-results>
 	</package>
 
@@ -45,7 +45,6 @@
 	<package name="user" extends="struts-default" namespace="/user">
 		<action name="loginAction" class="loginAction">
 			<result name="success">/index.jsp</result>
-			<result name="failure">/login.jsp</result>
 		</action>
 	</package>
 	<package name="image" extends="struts-o2o" namespace="/image">
