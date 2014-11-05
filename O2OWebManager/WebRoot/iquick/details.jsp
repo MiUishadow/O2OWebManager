@@ -35,7 +35,7 @@
 
 
 
-  <div id="top"> 
+   <div id="top"> 
   <div id="top_head"> 
     <strong>您好！欢迎来到I&middot;快客，祝您购物愉快！</strong> 
     <p><a target="_blank" href="/login">登陆</a><span>|</span><a target="_blank" href="/regist">注册</a><span>|</span><a target="_blank" href="/mine">我的I&middot;快客</a><span>|</span><a target="_blank" href="/collect">我的收藏</a><span>|</span><a target="_blank" href="/cart">我的购物车</a><span>|</span><a target="_blank" href="/cart">去付款</a></p> 
@@ -46,12 +46,12 @@
    <!--Top begin--> 
    <div id="head" class="cf"> 
     <div id="top_ad">
-     <img src="assets/images/ad1.png" alt="" />
+     <img src="/O2OWebManager/iquick/assets/images/ad1.png" alt="" />
     </div> 
     
     <div id="top_center" class="cf"> 
      <div id="top_logo">
-      <img src="assets/images/logo_1.png" alt="" />
+      <img src="/O2OWebManager/iquick/assets/images/logo_1.png" alt="" />
      </div> 
      <div id="top_serch"> 
       <form action="#" method="get" class="search_form"> 
@@ -68,7 +68,7 @@
         <div> 
          <h2> <a>全部商品分类</a> </h2> 
         </div>
-        <div class="all-goods" data-src="/item/levelAction?category=" data-template-sub="#t-categories" data-template-item="#t-category-item"> 
+        <div class="all-goods" data-src="#" data-template-sub="#t-categories" data-template-item="#t-category-item"> 
         </div>
        </div> 
        <ul class="nav-list cf"> 
@@ -93,11 +93,11 @@
      <div id="mid_left"> 
       <div class="head-pic"> 
        <div class="big-pic" id="showCon0"> 
-        <a href="#"><img alt="" src="assets/images/product.png" /></a>
+        <a href="#"><img alt="" src="/O2OWebManager/iquick/assets/images/product.png" /></a>
        </div> 
        <div class="pro_s"> 
         <ul class="small-pic"> 
-         <li class="on" id="list0" onmouseover="showContent(0)"> <a><img src="assets/images/product_s.png" /></a> </li> 
+         <li class="on" id="list0" onmouseover="showContent(0)"> <a><img src="/O2OWebManager/iquick/assets/images/product_s.png" /></a> </li> 
         </ul> 
        </div> 
       </div> 
@@ -111,16 +111,16 @@
       </div> 
       <div class="r_box"> 
        <ul> 
-        <li class="r_pro"><a target="_blank" href="#"><img src="assets/images/product_r.png" width="170" height="170" /></a></li> 
-        <li class="r_pro_d"><a target="_blank" href="#"><img src="assets/images/product_r.png" width="170" height="170" /></a></li> 
+        <li class="r_pro"><a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/product_r.png" width="170" height="170" /></a></li> 
+        <li class="r_pro_d"><a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/product_r.png" width="170" height="170" /></a></li> 
        </ul> 
       </div> 
       <div class="r_box_button"> 
        <div class="r_b_p">
-        <a href="#"><img src="assets/images/prev.png" /></a>
+        <a href="#"><img src="/O2OWebManager/iquick/assets/images/prev.png" /></a>
        </div> 
        <div class="r_b_n">
-        <a href="#"><img src="assets/images/next.png" /></a>
+        <a href="#"><img src="/O2OWebManager/iquick/assets/images/next.png" /></a>
        </div> 
       </div> 
      </div> 
@@ -155,21 +155,21 @@
         <p>看过本商品的用户还看过</p> 
         <div id="look"> 
          <div id="look_pro"> 
-          <a target="_blank" href="#"><img src="assets/images/product_s.png" /></a> 
+          <a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/product_s.png" /></a> 
           <p><a target="_blank" href="#">妙妙 鸡味香脆片 60g 马来西亚进口</a></p> 
           <b>&yen;11.9</b>
           <br /> 
           <input type="button" class="cart_button" value="加入购物车" /> 
          </div> 
          <div id="look_pro"> 
-          <a target="_blank" href="#"><img src="assets/images/product_s.png" /></a> 
+          <a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/product_s.png" /></a> 
           <p><a target="_blank" href="#">妙妙 鸡味香脆片 60g 马来西亚进口</a></p> 
           <b>&yen;11.9</b>
           <br /> 
           <input type="button" class="cart_button" value="加入购物车" /> 
          </div> 
          <div id="look_pro"> 
-          <a target="_blank" href="#"><img src="assets/images/product_s.png" /></a> 
+          <a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/product_s.png" /></a> 
           <p><a target="_blank" href="#">妙妙 鸡味香脆片 60g 马来西亚进口</a></p> 
           <b>&yen;11.9</b>
           <br /> 
@@ -184,7 +184,7 @@
        </div> 
        <div class="bottom_l_bb"> 
         <ul> 
-         <li class="pro_1"><a target="_blank" href="#"><img src="assets/images/pro_b.png" width="85" height="85" alt="" /></a><a target="_blank" href="#">【无添加】樱の季节 杏仁粉 新鲜无糖 200g/罐</a><p>&yen;179</p></li> 
+         <li class="pro_1"><a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/pro_b.png" width="85" height="85" alt="" /></a><a target="_blank" href="#">【无添加】樱の季节 杏仁粉 新鲜无糖 200g/罐</a><p>&yen;179</p></li> 
          <li><span>&nbsp;2&nbsp;</span><a target="_blank" href="#">hahne 亨利 玉米片 375g 德国进口hahne 亨利 玉米片 375g 德国进口</a></li> 
          <li><span>&nbsp;3&nbsp;</span><a target="_blank" href="#">hahne 亨利 玉米片 375g 德国进口</a></li> 
          <li><span>&nbsp;4&nbsp;</span><a target="_blank" href="#">hahne 亨利 玉米片 375g 德国进口</a></li> 
@@ -233,10 +233,10 @@
    </div> 
   </div>
 
-  <script type="text/javascript" src="assets/js/~js/focus.js"></script> 
-  <script type="text/javascript" src="assets/js/~js/jquery.tabs.js"></script> 
-  <script type="text/javascript" src="assets/js/~js/jquery.lazyload.js"></script> 
-  <script type="text/javascript" src="assets/js/~js/lanrenzhijia.js"></script> 
+  <script type="text/javascript" src="/O2OWebManager/iquick/assets/js/~js/focus.js"></script> 
+  <script type="text/javascript" src="/O2OWebManager/iquick/assets/js/~js/jquery.tabs.js"></script> 
+  <script type="text/javascript" src="/O2OWebManager/iquick/assets/js/~js/jquery.lazyload.js"></script> 
+  <script type="text/javascript" src="/O2OWebManager/iquick/assets/js/~js/lanrenzhijia.js"></script> 
   <script>
     function setTab(name,cursel){
       cursel_0=cursel;
@@ -289,17 +289,23 @@
 
   <!-- by daidai.in -->
   <script type="text/template" id="t-detail-midl" data-target="#mid_left">
-    <div class="head-pic"> 
+    <div class="head-pic">
+  <div class="big-pic" id="showCon9999"> 
+   <a href="#"><img alt="" src="/O2OWebManager/image/getImage?imageID=<{= item.imageId }>" /></a>
+  </div>
   <{ 
     var i = 0, len = images.length;
     for(i;i<len;i++){
   }>
- <div class="big-pic" id="showCon<{= i }>" <{ if(i!=0)print('style="display:none"');}>> 
-  <a href="#"><img alt="" src="/O2OWebManager/image/getImage?imageID=<{= images[i] }>" /></a>
+ <div class="big-pic" id="showCon<{= i }>" style="display:none"> 
+  <a href="#"><img alt=""src="/O2OWebManager/image/getImage?imageID=<{= images[i] }>" /></a>
  </div>
  <{ }}> 
  <div class="pro_s"> 
   <ul class="small-pic"> 
+    <li class="on" id="list9999" onmouseover="showContent(9999)"><a>
+      <img src="/O2OWebManager/image/getImage?imageID=<{= item.imageId }>" /></a>
+    </li> 
     <{ 
       i = 0;
       for(i;i<len;i++){
@@ -340,7 +346,7 @@
          <a id="collect-btn" href="javascript:;">收藏</a>
         </div> 
         <div class="jifen">
-         <a target="_blank" href="#"><img src="assets/images/jifen.png" alt="" /></a>
+         <a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/jifen.png" alt="" /></a>
         </div> 
        </div> 
        <b class="send">
@@ -370,7 +376,7 @@
       </div> 
       <div id="mid_border"> 
        <p>购物满150元可领取30元抵用券</p> 
-       <a target="_blank" href="#"><img src="assets/images/dizhi.png" alt="" /></a> 
+       <a target="_blank" href="#"><img src="/O2OWebManager/iquick/assets/images/dizhi.png" alt="" /></a> 
       </div> 
 
   </script>
@@ -385,27 +391,7 @@
   </script>
 
   <script type="text/template" id="t-categories">
-     <div class="cf"> 
-  <div class="fl wd252 pr20"> 
-   <h2><a href="#">LOGO</a></h2> 
-   <p class="lh30">两大超值套餐任选，最低只需588元。</p> 
-   <ul class="cf">
-    <{ $.each(sublevels, function(idx, subleave){ }>
-      <li>
-        <a href="/<{= subleave.category }>" target="_blank"><{= subleave.levelName }></a>
-      </li> 
-    <{ }); }>
-   </ul> 
-  </div> 
-  <dl class="fl wd185 pl20 blee"> 
-   <dt class="lh36">
-    促销活动
-   </dt> 
-   <dd id="logoads">
-    <a href="#" target="_blank" title="logo"><img src="assets/images/0931524708.jpg" /></a>
-   </dd> 
-  </dl> 
- </div> 
+    
 
   </script>
 
@@ -422,7 +408,6 @@
      </div> 
 <{ }); }>
   </script>
-<%String itemId = request.getParameter("itemId"); %>
 
   <script type="text/javascript">
 
@@ -430,15 +415,15 @@
 
       IQ.meta = {
         id : '22',
-        url : '/O2OWebManager/item/DetailAction?itemID=<%=itemId%>'
+        url : '/O2OWebManager/item/DetailAction?itemID=<%=request.getParameter("itemId")%>'
       };
 
       IQ.cart = {
         order: '/order',
-        getcart: '/item/buyAction!getCart.action',
+        getcart: '/O2OWebManager/item/buyAction!getCart.action',
         collect: '/collect',
         remove: '/remove',
-        add: '/item/buyAction!addItem.action'
+        add: '/O2OWebManager/item/buyAction!addItem.action'
       };
 
       seajs.config({
@@ -461,7 +446,7 @@
     </div> 
 
     <div class="desc">
-      <img src="assets/images/footer.png" /> 
+      <img src="/O2OWebManager/iquick/assets/images/footer.png" /> 
     </div>
   </div>   
   </body>

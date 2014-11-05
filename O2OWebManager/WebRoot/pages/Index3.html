@@ -227,15 +227,17 @@
 				url:sendurl,
 				secureuri:true,
 				fileElementId:'file2upload',
-				dataType:'json',
+				dataType:'text',
 				data:sendinfo,
 				success: function (data, status)
 				{
-					$.messager.alert('Warning',data.info);
+					var returninfo = eval('('+data+')');
+					$.messager.alert('Warning',returninfo.info);
 				},
 				error: function (data, status, e)
 				{
-					alert(data.info);
+					var returninfo = eval('('+data+')');
+					$.messager.alert('Warning',returninfo.info);
 				}
 			}
 		)
@@ -257,32 +259,32 @@
     			<span id="title_context">标题内容</span><br>
                 <a id="rollbarimg1_save" href="javascript:void(0)" onclick="rollbar_upload(this)" class="easyui-linkbutton" data-options="iconCls:'icon-add'">上传</a>
     		</div>
-            <div class="rollbarImage">
+            <div class="rollbarImage" roll_index="2">
     			<img class="itemimage" src="/O2OWebManager/image/getImage?imageID=2"><br>
     			<span id="imgtitle">标题</span><br>
                 
                 <span id="title_context">标题内容</span><br>
                 <a id="rollbarimg1_save" href="javascript:void(0)" onclick="rollbar_upload(this)" class="easyui-linkbutton" data-options="iconCls:'icon-add'">上传</a>
     		</div>
-            <div class="rollbarImage">
+            <div class="rollbarImage" roll_index="3">
     			<img class="itemimage" src="/O2OWebManager/image/getImage?imageID=2"><br>
     			<span id="imgtitle">标题</span><br>
                <span id="title_context">标题内容</span><br>
                 <a id="rollbarimg1_save" href="javascript:void(0)" onclick="rollbar_upload(this)" class="easyui-linkbutton" data-options="iconCls:'icon-add'">上传</a>
     		</div>
-            <div class="rollbarImage">
+            <div class="rollbarImage" roll_index="4">
     			<img class="itemimage" src="/O2OWebManager/image/getImage?imageID=2"><br>
     			<span id="imgtitle">标题</span><br>
                 <span id="title_context">标题内容</span><br>
                 <a id="rollbarimg1_save" href="javascript:void(0)" onclick="rollbar_upload(this)" class="easyui-linkbutton" data-options="iconCls:'icon-add'">上传</a>
     		</div>
-            <div class="rollbarImage">
+            <div class="rollbarImage" roll_index="5">
     			<img class="itemimage" src="/O2OWebManager/image/getImage?imageID=2"><br>
     			<span id="imgtitle">标题</span><br>
                 <span id="title_context">标题内容</span><br>
                 <a id="rollbarimg1_save" href="javascript:void(0)" onclick="rollbar_upload(this)" class="easyui-linkbutton" data-options="iconCls:'icon-add'">上传</a>
     		</div>
-            <div class="rollbarImage">
+            <div class="rollbarImage" roll_index="6">
     			<img class="itemimage" src="/O2OWebManager/image/getImage?imageID=2"><br>
     			<span id="imgtitle">标题</span><br>
                 <span id="title_context">标题内容</span><br>

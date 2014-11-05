@@ -23,100 +23,6 @@ s{text-decoration:none;}
 	width:1280px;
 	margin:0 auto;
 }
-#top{
-	background:#00003f;
-	margin:0 auto;
-	color:#fff;
-	font-size:12px;
-}
-#top_head{
-	margin: 0 auto;
-	width: 1280px;
-	height: 36px;
-	line-height: 36px;
-}
-#top_head strong{
-	float:left;
-	font-weight:normal;
-}
-#top_head p{
-	float:right;
-	padding:0;
-	margin:0;
-	text-decoration:none;
-}
-#top_head a{
-	color:#fff;
-	text-decoration:none;
-}
-#top_head a:hover{
-	text-decoration:underline;
-}
-#top_head span{
-	padding:0 5px 0 5px;
-}
-
-#top_ad{
-	margin:0 auto;
-	width:1280px;
-}
-#top_ad img{
-	margin:0 auto;
-	padding:0;
-}
-#top_center{
-	width:1280px;
-	margin:0 auto;
-	padding: 10px 0;
-}
-#top_logo{
-	float:left;
-	margin:10px;
-	width:202px;
-}
-#top_serch{
-	float:left;
-	width:930px;
-}
-.search_form{
-	position:relative; 
-	height:50px; 
-	margin:24px 0 0 90px;
-	display:inline-block;
-} 
-.search_form:hover{
-	-webkit-box-shadow:0 0 3px #bc001d;
-	-moz-box-shadow:0 0 3px #bc001d;
-} 
-.sinput{
-	float:left; 
-	width:600px; 
-	height:40px; 
-	*height:38px; 
-	line-height:21px; 
-	padding:4px 7px;
-	font-size:16px;
-	color: #b3b3b3;
-	border:1px solid #bc001d; 
-	border-radius:2px 0 0 2px; 
-	background-color:#fbfbfb;
-} 
-.sbtn{
-	float:left; 
-	width:100px; 
-	height:48px; 
-	padding:0 12px; 
-	margin-left:-1px;  
-	border-radius:0 2px 2px 0; 
-	border:1px solid #bc001d; 
-	background-color:#bc001d; 
-	cursor:pointer;  
-	display:inline-block; 
-	font-size:18px; 
-	vertical-align:middle; 
-	color:#f3f7fc;
-} 
-.sbtn:hover{background:#8d0f15;}
 
 #top_navi{
 	margin:0 auto;
@@ -347,13 +253,13 @@ h2{font-family: "microsoft yahei"; font-size: 14px;}
 	height: 405px;
 }
 .c1_slide{
-	/* width: 730px; */
+	width: 5000px;
 	height: 314px;
 	position: relative;
 	overflow: hidden;
 }
 .c1_slide ul{
-	width: 730px;
+	/*width: 730px;*/
 	height: 314px;
 	position: absolute;
 	top: 0;
@@ -632,38 +538,4 @@ h2{font-family: "microsoft yahei"; font-size: 14px;}
 }
 .ad_b_r{
 	float:right;
-}
-
-#border{
-	font-size:12px;
-	line-height:28px;
-	text-align:center;
-	font-family:"Times New Roman", Times, serif, "微软雅黑";
-	padding-bottom:10px;
-}
-
-#border a{
-	text-decoration:none;
-	color:#000;
-	margin-left:10px;
-}
-#border a:hover{
-	text-decoration:underline;
-}
-#border span{
-	color:#000;
-}
-#footer{
-	padding-top:40px;
-	margin:0 auto;
-	text-align:center;
-}
-
-#footer .desc{
-	background: #140f2f;
-}
-
-#footer img{
-	display: block;
-	margin: 0 auto;
 }

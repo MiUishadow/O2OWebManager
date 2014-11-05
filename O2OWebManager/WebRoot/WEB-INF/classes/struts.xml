@@ -8,22 +8,47 @@
 	<!-- 默认上传文件大小 -->
 	<constant name="struts.multipart.maxSize" value="100000000" />
 	<constant name="struts.objectFactory" value="spring"></constant>
+
+	<!-- 统一验证Action -->
+	<package name="struts-o2o" extends="json-default">
+		<!-- 拦截器 -->
+		<interceptors>
+		
+			<interceptor name="loginVerify"
+				class="com.o2oweb.interceptors.LoginInterceptor">
+			</interceptor>
+
+			<interceptor-stack name="verify">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginVerify"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="verify"></default-interceptor-ref>
+		<global-results>
+			<result name="user">/login.jsp</result>
+		</global-results>
+	</package>
+
 	<!-- 默认执行用户信息查询 并跳转到展示界面 -->
 	<!-- 这里有一个bug 可以跳转到相应的页面，但是无法进入action 慎用 -->
 	<!-- <package name="loginIndex" namespace="/" extends="struts-default"> 
 		<default-action-ref name="index" /> <action name="loginIndex" class="com.all58.video.modules.user.action.LoginAction" 
 		method="index"> <result name="login">/loginTest.jsp</result> </action> </package> -->
 	<package name="jump" extends="struts-default" namespace="/jump">
-		
+
 	</package>
 	<!-- <package name="user" extends="struts-default" namespace="/user"> <action 
 		name="userAction" class="userAction"> <result>/pages/Index.jsp</result> <result 
 		name="toSelect">/pages/Index2.jsp</result> <result name="toShop" type="redirectAction">page3/page3Action.action</result> 
-		</action> </package> --> 
-	<package name="user" extends="json-default" namespace="/user">
-		
+		</action> </package> -->
+	<package name="user" extends="struts-default" namespace="/user">
+		<action name="loginAction" class="loginAction">
+			<result name="success">/index.jsp</result>
+			<result name="failure">/login.jsp</result>
+		</action>
 	</package>
-	<package name="image" extends="json-default" namespace="/image">
+	<package name="image" extends="struts-o2o" namespace="/image">
 		<action name="getImage" class="getImage">
 			<result type="stream">
 				<param name="contentType">image/jpeg</param>
@@ -31,7 +56,7 @@
 			</result>
 		</action>
 	</package>
-	<package name="item" extends="json-default" namespace="/item">
+	<package name="item" extends="struts-o2o" namespace="/item">
 		<action name="itemAction" class="itemAction">
 			<result type="json">
 				<param name="root">obj</param>
@@ -51,21 +76,21 @@
 			</result>
 		</action>
 	</package>
-	<package name="file" extends="json-default" namespace="/file">
+	<package name="file" extends="struts-o2o" namespace="/file">
 		<action name="ajaxfileAction" class="ajaxfileAction">
 			<result type="json">
 				<param name="root">obj</param>
 			</result>
 		</action>
 	</package>
-	<package name="order" extends="json-default" namespace="/order">
+	<package name="order" extends="struts-o2o" namespace="/order">
 		<action name="orderAction" class="orderAction">
 			<result type="json">
 				<param name="root">obj</param>
 			</result>
 		</action>
 	</package>
-	<package name="page" extends="json-default" namespace="/page">
+	<package name="page" extends="struts-o2o" namespace="/page">
 		<action name="index3Action" class="index3Action">
 			<result type="json">
 				<param name="root">obj</param>
@@ -77,7 +102,7 @@
 			</result>
 		</action>
 	</package>
-	<package name="level" extends="json-default" namespace="/level">
+	<package name="level" extends="struts-o2o" namespace="/level">
 		<action name="levelAction" class="levelAction">
 			<result type="json">
 				<param name="root">obj</param>

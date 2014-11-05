@@ -21,6 +21,8 @@
 <listener>
   <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 </listener>
+
+	
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>
@@ -36,6 +38,10 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+
+
+
 
 	<filter>
 		<filter-name>openSessionInView</filter-name>
@@ -54,8 +60,18 @@
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-  
+
+	<filter>
+  		<filter-name>pages2filter</filter-name>
+  		<filter-class>com.o2oweb.common.myFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+  		<filter-name>pages2filter</filter-name>
+  		<url-pattern>/pages/*</url-pattern>
+  	</filter-mapping>
+
+
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -49,7 +49,7 @@ public class Index3Service {
 		Itemf twof = itemfDao.getItemf(index3.getFtwoId());
 		JSONObject twofobj = new JSONObject();
 		twofobj.accumulate("FName", twof.getFname());
-		twofobj.accumulate("items", itemf2array(onef));
+		twofobj.accumulate("items", itemf2array(twof));
 		obj.accumulate("twoF", twofobj);
 		
 		Itemf threef = itemfDao.getItemf(index3.getFthreeId());

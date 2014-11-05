@@ -13,7 +13,7 @@
 	<package name="struts-o2o" extends="json-default">
 		<!-- 拦截器 -->
 		<interceptors>
-
+		
 			<interceptor name="loginVerify"
 				class="com.o2oweb.interceptors.LoginInterceptor">
 			</interceptor>

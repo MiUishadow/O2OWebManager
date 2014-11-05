@@ -152,15 +152,11 @@ public class OrderAction extends BaseAction {
 			writeResponse("该订单已处理！");
 			return;
 		}
-		if (order.getIsPaied()) {
 			order.setChekOut(this.chekOut);
 
 			this.orderService.update(order);
 
 			writeResponse("true");
-		} else {
-			writeResponse("请先确认支付！");
-		}
 	}
 
 	public void dealPaied() {
@@ -169,13 +165,16 @@ public class OrderAction extends BaseAction {
 			writeResponse("该订单已支付！");
 			return;
 		}
-
+if(order.getChekOut()){
 		order.setIsPaied(this.paied);
 		order.setFinishTime(new Date());
 
 		this.orderService.update(order);
 
 		writeResponse("true");
+}else{
+	writeResponse("请先处理订单！");
+}
 	}
 
 	public void checkOrder() {

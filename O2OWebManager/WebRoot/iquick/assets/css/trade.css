@@ -1,0 +1,317 @@
+
+#procedure{
+	width:600px;
+	height:70px;
+	margin:10px auto;
+	float:right;
+}
+
+#content{
+	width:1000px;
+	margin:0 auto;
+}
+#con_top{
+	background:#efefef;
+	margin:0 auto;
+	padding:5px 20px;
+	border:1px solid #d5d5d5;
+	border-bottom:none;
+	font-size:18px;
+	font-weight:bolder;
+}
+#con_top h1{
+	padding-left:20px;
+	font-size:20px;
+}
+#consignee{
+	margin:0 auto;
+	padding:20px 10px;
+	border:2px solid red;
+	padding-bottom:20px;
+}
+#consignee p{
+	padding:0 0 10px 10px;
+	font-size:18px;
+}
+#consignee a{
+	font-size:14px;
+	margin-left:20px;
+}
+#consignee .submit{
+	background:#f08300;
+	border:none;
+	margin:20px;
+	width:160px;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bolder;
+	border-radius:5px;
+}
+#consignee span{
+	font-size:14px;
+	margin:40px;
+	color:#666;
+}
+#consignee_s{
+	margin:0 auto;
+	padding:10px 10px;
+	border:1px solid #d5d5d5;
+	padding-bottom:20px;
+}
+#consignee_s p{
+	padding:0 10px;
+	font-size:18px;
+}
+#consignee_s a{
+	font-size:14px;
+	margin-left:20px;
+}
+#consignee_s b{
+	padding:0 40px;
+	font-weight:normal;
+	font-size:14px;
+	color:#666;
+}
+#address{
+	padding:0 20px;
+	width:860px;
+	height:26px;
+	line-height:26px;
+	margin:0 auto;
+}
+
+.exist-address{
+	padding:0 20px;
+	width:860px;
+	line-height:26px;
+	margin:0 auto;
+}
+.info{
+	width:860px;
+	line-height:26px;
+	margin:0 auto;
+}
+#message{
+	width:860px;
+	height:40px;
+	line-height:40px;
+	margin:0 auto;
+}
+label{
+	color:#666;
+	font-size:14px;
+}
+#pay{
+	margin:0 auto;
+	padding:10px 20px;
+	border:1px solid #d5d5d5;
+}
+#pay p{
+	font-size:18px;
+}
+#pay span{
+	font-size:14px;
+	margin-left:20px;
+	color:#999;
+}
+#pay b{
+	font-weight:normal;
+	font-size:14px;
+	color:#666;
+	margin:5px 40px;
+}
+#pay_s{
+	margin:0 auto;
+	padding:0 20px;
+	border:2px solid red;
+	padding-bottom:20px;
+}
+#pay_s a{
+	color:#999;
+}
+#pay_s p{
+	font-size:18px;
+}
+#pay_s b{
+	font-size:16px;
+	color:#ff4500;
+	margin:5px 40px;
+}
+#pay_s span{
+	font-size:14px;
+	margin-left:20px;
+	color:#999;
+}
+#pay_s strong{
+	font-size:14px;
+	font-weight:normal;
+	color:#666;
+	margin-left:150px;
+}
+#pay_s em{
+	font-size:14px;
+	font-style:normal;
+}
+#pay_s input{
+	margin-left:50px;
+}
+#pay_s input[type="submit"]{
+	background:#f08300;
+	border:none;
+	margin:20px;
+	width:190px;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bolder;
+	border-radius:5px;
+}
+#invoice{
+	margin:0 auto;
+	padding:10px 20px;
+	border:1px solid #d5d5d5;
+	border-top:none;
+}
+#invoice p{
+	font-size:18px;
+}
+#invoice span{
+	font-size:14px;
+	margin-left:20px;
+	color:#999;
+}
+#invoice b{
+	font-weight:normal;
+	font-size:14px;
+	color:#666;
+	margin:5px 40px;
+}
+#invoice a{
+	font-weight:normal;
+	font-size:14px;
+	color:#ffa500;
+	margin:5px 40px;
+}
+#invoice a:hover{
+	text-decoration:none;
+}
+#invoice_s{
+	margin:0 auto;
+	padding:0 20px;
+	border:2px solid red;
+	padding-bottom:20px;
+}
+#invoice_s p{
+	font-size:18px;
+}
+#invoice_s a{
+	font-size:14px;
+	margin-left:20px;
+	color:#333;
+}
+#invoice_s span{
+	font-size:14px;
+	color:#999;
+}
+#invoice_s b{
+	font-weight:normal;
+	font-size:14px;
+	color:#ff4500;
+	margin:5px 40px;
+}
+#invoice_s strong{
+	font-weight:normal;
+	font-size:14px;
+	color:#ffa500;
+	margin:5px 40px;
+}
+#invoice_s input{
+	margin-left:50px;
+}
+#invoice_s input[type="submit"]{
+	background:#f08300;
+	border:none;
+	margin:20px;
+	width:140px;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bolder;
+	border-radius:5px;
+}
+#pro_info{
+	margin:0 auto;
+	padding:0 20px 20px 20px;
+	border:1px solid #d5d5d5;
+	border-top:none;
+}
+#pro_info p{
+	font-size:18px;
+	padding:10px 0;
+}
+#pro_info span{
+	float:right;
+}
+#pro_info a{
+	color:#666;
+	font-size:14px;
+	margin-right:20px;
+}
+#pro_info table{
+	/*margin:5px 20px;*/
+	width:100%;
+}
+#pro_info tr{
+	background:#e5e5e5;
+	text-align:center;
+	font-size:14px;
+}
+#pro_info tr td img{
+	float:left;
+	width:60px;
+	margin:0 10px;
+}
+#pro_info tr td p{
+	width:300px;
+	margin:0;
+	float:right;
+	font-size:14px;
+	text-align:left;
+	color:#333;
+}
+#pro_info tr td span{
+	float:left;
+	width:300px;
+	text-align:left;
+	margin-left:10px;
+	color:#ccc;
+}
+#totle{
+	margin:0 auto;
+	background:#d5d5d5;
+	height:40px;
+	line-height:40px;
+	border:1px solid #d5d5d5;
+	font-size:18px;
+}
+#totle p{
+	float:right;
+	margin:0;
+	padding:0;
+	margin-right:40px;
+}
+#totle span{
+	color:red;
+	margin:0 5px;
+}
+#totle input[type="submit"]{
+	border:none;
+	background:#f08300;
+	width:120px;
+	height:30px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bolder;
+	border-radius:5px;
+}

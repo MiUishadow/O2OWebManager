@@ -1,2 +1,2 @@
-/*! aikuaike 0.1.0 2014-09-28 */
+/*! aikuaike 0.1.1 2014-10-20 */
 define("clib/network",[],function(a,b){var c={url:"",type:"GET",dataType:"json",timeout:6e4},d=function(a,b,d){return d="object"==typeof a?$.extend({},c,a):"object"==typeof b?$.extend({},c,b):$.extend({},c,d),d.success=function(b){"function"==typeof a&&a(b)},d.error=function(a){"function"==typeof b&&b(a)},d};b.get=function(a,b,c,e){e=d(b,c,e),e.url=a,$.ajax(e)},b.post=function(a,b,c,e){e=d(b,c,e),e.url=a,e.type="POST",$.ajax(e)},b.script=function(a,b,c,e){e=d(b,c,e),e.url=a,e.dataType="script",$.ajax(e)},b.text=function(a,b,c,e){e=d(b,c,e),e.url=a,e.dataType="text",$.ajax(e)}});

@@ -1,2 +1,2 @@
-/*! aikuaike 0.1.0 2014-09-28 */
+/*! aikuaike 0.1.1 2014-10-20 */
 define("clib/animation",[],function(a,b){b.loading=function(a){$(a).append('<div class="loading" style="'+c()+'"></div>')};var c=function(){return"background: white url('/dist/assets/0.1.0/images/486.gif') no-repeat center center;color: white;overflow: hidden;text-indent: 9999px;"};b.loading=function(a,b){$(a).addClass("loading-anim"),$(a).addClass("loading-anim-"+b)},b.stop=function(a){$(a).removeClass("loading-anim")}});
