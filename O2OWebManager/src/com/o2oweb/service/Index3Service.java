@@ -81,7 +81,7 @@ public class Index3Service {
 			items.add(itemDao.getItem(itemf.getItem3()));
 		if(itemf.getItem4()!=null)
 			items.add(itemDao.getItem(itemf.getItem4()));
-		if(itemf.getItem4()!=null)
+		if(itemf.getItem5()!=null)
 			items.add(itemDao.getItem(itemf.getItem5()));
 		if(itemf.getItem6()!=null)
 			items.add(itemDao.getItem(itemf.getItem6()));
