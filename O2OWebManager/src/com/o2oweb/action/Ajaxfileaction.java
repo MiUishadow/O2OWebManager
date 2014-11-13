@@ -115,6 +115,16 @@ public class Ajaxfileaction extends BaseAction {
 				item.setLevelId(0);
 				item.setItemName(row.get("名称（必填）").trim());
 				item.setPrice(Float.valueOf(row.get("销售价（必填）").trim()));
+				String category_text = row.get("分类（必填）").trim();
+				if("无".endsWith(category_text)){
+					item.setLevelId(0);
+				}else{
+					try {
+						item.setLevelId(Integer.valueOf(category_text));
+					} catch (Exception e) {
+						item.setLevelId(0);
+					}
+				}
 				item.setStockNum(Integer.valueOf(row.get("库存量（必填）").trim()));
 				item.setBarCode(row.get("条码（必填）").trim());
 				item.setInPrice(Float.valueOf(row.get("进货价（必填）").trim()));

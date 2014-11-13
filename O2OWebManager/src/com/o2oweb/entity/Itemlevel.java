@@ -16,8 +16,9 @@ public class Itemlevel implements java.io.Serializable {
 	// Fields
 
 	private Integer idItemLevel;
-	private Integer surperId = 0;
+	private Integer surperId;
 	private String levelName;
+	private String subsuperIds;
 
 	// Constructors
 
@@ -25,10 +26,17 @@ public class Itemlevel implements java.io.Serializable {
 	public Itemlevel() {
 	}
 
-	/** full constructor */
+	/** minimal constructor */
 	public Itemlevel(Integer surperId, String levelName) {
 		this.surperId = surperId;
 		this.levelName = levelName;
+	}
+
+	/** full constructor */
+	public Itemlevel(Integer surperId, String levelName, String subsuperIds) {
+		this.surperId = surperId;
+		this.levelName = levelName;
+		this.subsuperIds = subsuperIds;
 	}
 
 	// Property accessors
@@ -43,7 +51,7 @@ public class Itemlevel implements java.io.Serializable {
 		this.idItemLevel = idItemLevel;
 	}
 
-	@Column(name = "surperID")
+	@Column(name = "surperID", nullable = false)
 	public Integer getSurperId() {
 		return this.surperId;
 	}
@@ -52,13 +60,22 @@ public class Itemlevel implements java.io.Serializable {
 		this.surperId = surperId;
 	}
 
-	@Column(name = "LevelName", length = 45)
+	@Column(name = "LevelName", nullable = false, length = 45)
 	public String getLevelName() {
 		return this.levelName;
 	}
 
 	public void setLevelName(String levelName) {
 		this.levelName = levelName;
+	}
+
+	@Column(name = "subsuperIDs")
+	public String getSubsuperIds() {
+		return this.subsuperIds;
+	}
+
+	public void setSubsuperIds(String subsuperIds) {
+		this.subsuperIds = subsuperIds;
 	}
 
 }

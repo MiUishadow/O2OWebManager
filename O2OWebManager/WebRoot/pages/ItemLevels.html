@@ -163,6 +163,8 @@
 							handler : function() {
 								var levelobj = {};
 								levelobj.category = selectnode.id;
+								var prenode = nowtree.tree('getParent',selectnode.target);
+								levelobj.superId = prenode.id;
 								$.post(deleteurl, levelobj, function(result) {
 									if (result == 'true') {
 										$.messager.alert('Message', '删除成功！');

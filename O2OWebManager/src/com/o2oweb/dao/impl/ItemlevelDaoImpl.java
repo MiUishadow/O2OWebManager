@@ -2,9 +2,11 @@ package com.o2oweb.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.stereotype.Component;
 
 import com.o2oweb.common.dao.HibernateEntityDao;
+import com.o2oweb.common.dao.support.Page;
 import com.o2oweb.dao.ItemLevelDao;
 import com.o2oweb.entity.Itemlevel;
 
@@ -13,7 +15,7 @@ public class ItemlevelDaoImpl extends HibernateEntityDao<Itemlevel> implements
 		ItemLevelDao {
 
 	public void save(Itemlevel itemLevel) {
-		super.merge(itemLevel);
+		super.save(itemLevel);
 	}
 
 	public void update(Itemlevel itemLevel) {
@@ -59,5 +61,9 @@ public class ItemlevelDaoImpl extends HibernateEntityDao<Itemlevel> implements
 		}
 		return null;
 	}
-
+	@Override
+	public Page pagedQuery(DetachedCriteria detachedCriteria, int startIndex,
+			int pageSize) {
+		return super.pagedQuery(detachedCriteria, startIndex, pageSize);
+	}
 }

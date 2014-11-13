@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -64,24 +65,56 @@ public class LevelAction extends BaseAction {
 	}
 
 	public void addLevel() {
-		Itemlevel il = this.itemLevelService.getLevel(superId, levelName);
-		if (il == null) {
-			il = new Itemlevel();
-			il.setSurperId(superId);
-			il.setLevelName(levelName);
-
-			this.itemLevelService.save(il);
-
-			ItemLevelBean[] ilb = new ItemLevelBean[] { new ItemLevelBean() };
-			il = this.itemLevelService.getLevel(superId, levelName);
-			ilb[0].setId(il.getIdItemLevel());
-			ilb[0].setText(il.getLevelName() + " 编号:" + il.getIdItemLevel());
-			JSONArray jsa = JSONArray.fromObject(ilb);
-			writeResponse(jsa.toString());
+		if (Character.isDigit(levelName.charAt(0))) {
+			/*
+			 * 如果添加的是数字，则说明是将现有的分类添加到当前分支下
+			 */
+			try {
+				Itemlevel itemlevel = itemLevelService.getLevel(Integer.valueOf(levelName));
+				//更新子节点
+				boolean result = itemLevelService.addssublevel(itemlevel,superId,levelName);
+				if(result){
+					JSONArray jsa = level2array(itemlevel);
+					writeResponse(jsa.toString());
+				}else{
+					writeResponse("false");
+				}
+			} catch (Exception e) {
+				writeResponse("false");
+				return;
+			}
+			
 		} else {
-			writeResponse("false");
+			//如果levelName不是数字
+			Itemlevel il = this.itemLevelService.getLevel(superId, levelName);
+			if (il == null) {
+				il = new Itemlevel();
+				il.setSurperId(superId);
+				il.setLevelName(levelName);
+
+				this.itemLevelService.save(il);
+
+				ItemLevelBean[] ilb = new ItemLevelBean[] { new ItemLevelBean() };
+				il = this.itemLevelService.getLevel(superId, levelName);
+//				ilb[0].setId(il.getIdItemLevel());
+//				ilb[0].setText(il.getLevelName() + " 编号:" + il.getIdItemLevel());
+//				JSONArray jsa = JSONArray.fromObject(ilb);
+				JSONArray jsa = level2array(il);
+				writeResponse(jsa.toString());
+			} else {
+				writeResponse("false");
+			}
 		}
 	}
+	
+	private JSONArray level2array(Itemlevel itemlevel){
+		ItemLevelBean[] ilb = new ItemLevelBean[]{new ItemLevelBean()};
+		ilb[0].setId(itemlevel.getIdItemLevel());
+		ilb[0].setText(itemlevel.getLevelName() + "编号:" + itemlevel.getIdItemLevel());
+		JSONArray jsa = JSONArray.fromObject(ilb);
+		return jsa;
+	}
+	
 
 	public void updateLevel() {
 		Itemlevel il = this.itemLevelService.getLevel(category);
@@ -93,12 +126,19 @@ public class LevelAction extends BaseAction {
 	}
 
 	public void deleteLevel() {
-		Itemlevel il = new Itemlevel();
-		il.setIdItemLevel(this.category);
+		Itemlevel il = itemLevelService.getLevel(category);
+		if (il.getSubsuperIds() == null) {
+			//如果第二父级字段为空直接删除
+//			il.setIdItemLevel(this.category);
 
-		this.itemLevelService.remove(il);
+			this.itemLevelService.remove(il);
 
-		writeResponse("true");
+			writeResponse("true");
+		}else {
+			//判断字段
+			itemLevelService.remvessupid(il,superId);
+			writeResponse("true");
+		}
 	}
 
 	public Integer getCategory() {
