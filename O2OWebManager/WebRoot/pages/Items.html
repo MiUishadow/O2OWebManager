@@ -11,8 +11,9 @@
     <script language="javascript" src="../js/jquery-2.1.0.min.js"></script>
     
     <script language="javascript" src="../js/jquery.easyui.min.js"></script>
-    <script language="javascript" src="../js/ckeditor/ckeditor.js"></script>
-    <script language="javascript" src="../js/ckeditor/config.js"></script>
+    <script language="javascript" src="/O2OWebManager/ckeditor/ckeditor.js"></script>
+    <script language="javascript" src="/O2OWebManager/ckeditor/config.js"></script>
+    <script type="text/javascript" src="/O2OWebManager/ckeditor/adapters/jquery.js"></script>
     <script language="javascript" src="../js/fileupload/ajaxfileupload.js"></script>
     
    <script>
@@ -224,6 +225,11 @@
 	});
 });
 
+//编辑窗口
+$( document ).ready( function() {
+	$('#detial_context').ckeditor();
+} );
+
 //通用函数
 function addimg2win(imginfo){
 	var divobj = $('<div/>');
@@ -376,7 +382,16 @@ function excelupload(excelFilename,excelFileExt)
 					//data = eval('('+data+')');
 					var jsondata = catchjson(data);
 					jsondata = eval('('+jsondata+')');
-					$.messager.alert('Warning',jsondata.info);
+					if(jsondata.status){
+						var imagesrc = jsondata.info;
+						var appendData = "<img src='"+ imagesrc +"'/>";
+						var textData = CKEDITOR.instances.detial_context.getData();
+						textData = textData + appendData;
+						CKEDITOR.instances.detial_context.setData(textData);
+						$.messager.alert('Warning',"图片添加成功");
+					}else{
+						$.messager.alert('Warning',jsondata.info);
+					}
 				},
 				error: function (data, status, e)
 				{
@@ -486,7 +501,7 @@ function excelupload(excelFilename,excelFileExt)
  <!-- 详细信息输入窗口-->
  <div id="detial_input" class="easyui-window" title="商品详细介绍" style="width:800px; height:500px; text-align:center" 
  	data-options="modal:true,closed:true">
-    	<textarea id="detial_context" class="ckeditor" name="detial_context"></textarea>
+    	<textarea id="detial_context"  name="detial_context"></textarea>
         <a id="det_save" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
         <br>
         <div>

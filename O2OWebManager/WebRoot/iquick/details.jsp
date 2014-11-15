@@ -310,7 +310,7 @@
       i = 0;
       for(i;i<len;i++){
     }>
-    <li <{ if(i==0)print('class="on"');}> id="list<{= i }>" onmouseover="showContent(<{= i }>)"><a>
+    <li id="list<{= i }>" onmouseover="showContent(<{= i }>)"><a>
       <img src="/O2OWebManager/image/getImage?imageID=<{= images[i] }>" /></a>
     </li> 
    <{ }}>
@@ -411,6 +411,7 @@
 
   <script type="text/javascript">
 
+  	current = 9999;
     $(function(){
 
       IQ.meta = {
