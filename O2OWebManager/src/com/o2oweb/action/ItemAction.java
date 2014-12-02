@@ -49,7 +49,7 @@ public class ItemAction extends BaseAction {
 	
 	public void save() {
 		Item item = new Item(itemName, levelId, price, inPrice, discount,
-				sailerId, imageId, itemDetail, stockNum, barCode);
+				sailerId, imageId, itemDetail, stockNum, barCode,0,true);
 		
 		this.itemService.save(item);
 
@@ -67,9 +67,9 @@ public class ItemAction extends BaseAction {
 
 	public void update() {
 		Item item = new Item(itemName, levelId, price, inPrice, discount,
-				sailerId, imageId, itemDetail, stockNum, barCode);
+				sailerId, imageId, itemDetail, stockNum, barCode,0,true);
 		item.setItemId(itemId);
-		System.out.println(itemName);
+		
 		this.itemService.update(item);
 
 		JSONObject obj = new JSONObject();
@@ -92,6 +92,7 @@ public class ItemAction extends BaseAction {
 	@Override
 	public String execute() throws Exception {
 		DetachedCriteria dc = DetachedCriteria.forClass(Item.class);
+		dc.add(Restrictions.eq("enable", true));
 		if(searchinfo!=null&&!"".endsWith(searchinfo.trim())){
 			dc.add(Restrictions.like("itemName", searchinfo, MatchMode.ANYWHERE));
 		}
@@ -304,4 +305,13 @@ public class ItemAction extends BaseAction {
 		this.searchinfo = searchinfo;
 	}
 	
+	public void changeImageUrl(){
+		try {
+			itemService.changeimageURL();
+		} catch (Exception e) {
+			writeResponse("Exception: " + e.getMessage());
+			return;
+		}
+		writeResponse("替换完成");
+	}
 }

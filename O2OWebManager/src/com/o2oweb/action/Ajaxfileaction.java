@@ -53,7 +53,7 @@ public class Ajaxfileaction extends BaseAction {
 	private int imgindex;
 	private String imgtitle;
 
-	private static String urlpre = "/O2OWebManager/image/getImage?imageID=";
+	private static String urlpre = "/O2OWebSit/image/getImage?imageID=";
 
 	@Override
 	public String execute() throws Exception {

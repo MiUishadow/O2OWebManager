@@ -92,6 +92,10 @@ public class OrderAction extends BaseAction {
 			if (orderby.equals("chekOutNow")) {
 				dc.add(Restrictions.eq("chekOut", false));
 				dc.addOrder(org.hibernate.criterion.Order.asc("orderNum"));
+			}else if("isPaied".equals(orderby)){
+				dc.add(Restrictions.eq("isPaied", false));
+			}else if("chekOut".equals(orderby)){
+				dc.add(Restrictions.eq("chekOut", false));
 			} else {
 				dc.addOrder(org.hibernate.criterion.Order.asc(orderby));
 			}

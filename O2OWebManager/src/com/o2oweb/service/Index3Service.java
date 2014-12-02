@@ -74,22 +74,44 @@ public class Index3Service {
 		
 		if(itemf.getItem1()!=null){
 			items.add(itemDao.getItem(itemf.getItem1()));
+		}else{
+			items.add(new Item());
 		}
-		if(itemf.getItem2()!=null)
+		if(itemf.getItem2()!=null){
 			items.add(itemDao.getItem(itemf.getItem2()));
-		if(itemf.getItem3()!=null)
+		}else{
+			items.add(new Item());
+		}
+		if(itemf.getItem3()!=null){
 			items.add(itemDao.getItem(itemf.getItem3()));
-		if(itemf.getItem4()!=null)
+		}else{
+			items.add(new Item());
+		}
+		if(itemf.getItem4()!=null){
 			items.add(itemDao.getItem(itemf.getItem4()));
-		if(itemf.getItem5()!=null)
+		}else{
+			items.add(new Item());
+		}
+		if(itemf.getItem5()!=null){
 			items.add(itemDao.getItem(itemf.getItem5()));
-		if(itemf.getItem6()!=null)
+		}else{
+			items.add(new Item());
+		}
+		if(itemf.getItem6()!=null){
 			items.add(itemDao.getItem(itemf.getItem6()));
-		if(itemf.getItem7()!=null)
+		}else{
+			items.add(new Item());
+		}
+		if(itemf.getItem7()!=null){
 			items.add(itemDao.getItem(itemf.getItem7()));
-		if(itemf.getItem8()!=null)
+		}else{
+			items.add(new Item());
+		}
+		if(itemf.getItem8()!=null){
 			items.add(itemDao.getItem(itemf.getItem8()));
-		
+		}else{
+			items.add(new Item());
+		}
 		jsa = JSONArray.fromObject(items);
 		
 		return jsa;

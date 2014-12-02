@@ -22,6 +22,9 @@ public class LoginInterceptor extends AbstractInterceptor {
 		if (name.equals("loginInterceptorAction")) {
 			return invocation.invoke();
 		}
+		if (name.equals("getImage")){
+			return invocation.invoke();
+		}
 		ActionContext ac = invocation.getInvocationContext();
 		Map session = (Map) ac.get(ServletActionContext.SESSION);
 

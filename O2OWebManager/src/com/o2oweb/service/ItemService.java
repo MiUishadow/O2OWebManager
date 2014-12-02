@@ -58,6 +58,7 @@ public class ItemService {
 		if(item.getBarCode() != null){
 			oldItem.setBarCode(item.getBarCode());
 		}
+		
 		this.itemDao.update(oldItem);
 	}
 
@@ -91,5 +92,23 @@ public class ItemService {
 	public Page itemquery(DetachedCriteria dc,int rows,int page){
 		Page p = itemDao.pagedQuery(dc, rows * (page-1), rows);
 		return p;
+	}
+	
+	public void changeimageURL(){
+		DetachedCriteria dc = DetachedCriteria.forClass(Item.class);
+		Page p = itemDao.pagedQuery(dc, 0, Integer.MAX_VALUE);
+		
+		List<Item> items = (List) p.getData();
+		System.out.println(items.size());
+		for(Item item : items){
+			String content = item.getItemDetail();
+			if(content != null){
+				content.replaceAll("/O2OWebManager/image/getImage", "/O2OWebSit/image/getImage");
+				item.setItemDetail(content);
+				itemDao.update(item);
+				System.out.println(item.getItemId());
+				System.out.println(item.getItemDetail());
+			}
+		}
 	}
 }

@@ -27,6 +27,8 @@ public class Item implements java.io.Serializable {
 	private String itemDetail;
 	private Integer stockNum;
 	private String barCode;
+	private Integer sealNum;
+	private boolean enable;
 
 	// Constructors
 
@@ -39,6 +41,7 @@ public class Item implements java.io.Serializable {
 		this.inPrice = 0;
 		this.stockNum = 0;
 		this.barCode = "";
+		
 	}
 
 	/** minimal constructor */
@@ -55,7 +58,8 @@ public class Item implements java.io.Serializable {
 	/** full constructor */
 	public Item(String itemName, Integer levelId, float price, float inPrice,
 			Integer discount, Integer sailerId, Integer imageId,
-			String itemDetail, Integer stockNum, String barCode) {
+			String itemDetail, Integer stockNum, String barCode,
+			Integer sealNum, boolean enable) {
 		this.itemName = itemName;
 		this.levelId = levelId;
 		this.price = price;
@@ -66,6 +70,8 @@ public class Item implements java.io.Serializable {
 		this.itemDetail = itemDetail;
 		this.stockNum = stockNum;
 		this.barCode = barCode;
+		this.sealNum = sealNum;
+		this.enable = enable;
 	}
 
 	// Property accessors
@@ -168,6 +174,24 @@ public class Item implements java.io.Serializable {
 
 	public void setBarCode(String barCode) {
 		this.barCode = barCode;
+	}
+
+	@Column(name = "sealNum")
+	public Integer getSealNum() {
+		return this.sealNum;
+	}
+
+	public void setSealNum(Integer sealNum) {
+		this.sealNum = sealNum;
+	}
+
+	@Column(name = "enable")
+	public boolean getEnable() {
+		return this.enable;
+	}
+
+	public void setEnable(boolean enable) {
+		this.enable = enable;
 	}
 
 }
